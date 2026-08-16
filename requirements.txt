@@ -1,0 +1,25 @@
+# NewsAgent — المكتبات المطلوبة
+
+# --- LangChain + LangGraph ---
+langchain==1.3.15
+langchain-core==1.5.5
+langchain-ollama==1.1.0
+langgraph==1.2.11
+
+# --- Ollama (تشغيل LLM محلياً) ---
+ollama==0.6.2
+
+# --- RSS & أخبار ---
+feedparser==6.0.14
+
+# --- تيليجرام ---
+requests==2.32.5
+
+# --- الجدولة التلقائية ---
+APScheduler==3.11.3
+
+# --- متغيرات البيئة (.env) ---
+python-dotenv==1.2.1
+
+# --- أساسيات ---
+pydantic==2.12.4
