@@ -11,7 +11,7 @@ def filter_agent(state: dict) -> dict:
             filtered.append(article)
 
     print(f"[Filter Agent] من {len(articles)} مقالة → بقي {len(filtered)}")
-    return {**state, "articles": filtered}
+    return {**state, "filtered_articles": filtered}  
 
 
 def is_relevant(article: dict) -> bool:
