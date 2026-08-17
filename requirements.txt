@@ -6,9 +6,6 @@ langchain-core==1.5.5
 langgraph==1.2.11
 langchain-groq==0.3.2
 
-# ---  (تشغيل LLM محلياً) ---
-GROQ_MODEL = "llama-3.1-8b-instant"
-
 # --- RSS & أخبار ---
 feedparser==6.0.14
 
