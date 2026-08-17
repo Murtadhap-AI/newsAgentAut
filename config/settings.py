@@ -14,7 +14,8 @@ EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 # LLM
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OLLAMA_MODEL = "Qwen3:8b"
-
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_MODEL = "llama-3.1-8b-instant"
 # مصادر الأخبار ()
 # config/settings.py
 
@@ -29,7 +30,6 @@ TOPICS_OF_INTEREST = [
     "deep learning", "neural network", "GPT", "Claude"
 ]
 
-OLLAMA_MODEL = "qwen3:8b"
 
 # ── الجديد ──────────────────────────────────────
 USER_PROFILE = {

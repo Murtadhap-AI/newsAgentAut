@@ -1,13 +1,13 @@
 # agent/summarizer_agent.py
 
-from langchain_ollama import ChatOllama
+from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from config.settings import OLLAMA_MODEL, USER_PROFILE
+from config.settings import GROQ_API_KEY, GROQ_MODEL, USER_PROFILE
 
 
 def build_summarizer_chain():
-    llm = ChatOllama(model=OLLAMA_MODEL)
+    llm = ChatGroq(model=GROQ_MODEL, api_key=GROQ_API_KEY)
 
     prompt = ChatPromptTemplate.from_template("""
 أنت مساعد AI شخصي لـ {name}.
