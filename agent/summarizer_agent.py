@@ -40,7 +40,7 @@ def build_summarizer_chain():
 
 def summarizer_agent(state: dict) -> dict:
     articles = state.get("filtered_articles", [])
-
+    print(f"=== Summarizer استلم: {len(articles)} مقالة ===") 
     if not articles:
         return {**state, "summarized_articles": []}
 
