@@ -1,0 +1,29 @@
+name: NewsAgent Daily Run
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # كل يوم 6 صباحاً UTC = 9 صباحاً عراق
+  workflow_dispatch:       # زر تشغيل يدوي من GitHub
+
+jobs:
+  run-news-agent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run NewsAgent
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python main.py
